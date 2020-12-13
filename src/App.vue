@@ -1,28 +1,74 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ul id="nav">
+      <MenuList 
+        class="item"
+        :item="menu"
+      />
+    </ul>
+
+    <div id="main">
+      <router-view/>
+    </div>
+
+    <div>Ceva</div>
+    
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+<script>
+//import Navbar from '@/components/Navbar.vue'
+
+import MenuList from '@/components/MenuList.vue'
+import menuJson from '@/components/MenuList.json'
+
+  export default {
+    components: {
+      MenuList
+    },
+    data(){
+      return{
+        menu: menuJson
+      }
+    }
   }
-}
 </script>
 
+
 <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: #fafafa;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 24px;
+  
+  }
+
+  #main {
+    position: absolute;
+    left: 300px;
+    top: 0;
+    right: 0;
+  }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #2c3e50; 
+  position: relative;
 }
+
+
 </style>
