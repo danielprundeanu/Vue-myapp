@@ -14,6 +14,7 @@
   },
   "main": "background.js",
   "dependencies": {
+    "all": "0.0.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
@@ -31,7 +32,8 @@
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
     "vue-cli-plugin-electron-builder": "~2.0.0-rc.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-loader": "^15.9.5",
+    "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
     "root": true,
