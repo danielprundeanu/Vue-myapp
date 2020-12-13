@@ -11,17 +11,16 @@
       <router-view/>
     </div>
 
-    <div>Ceva</div>
+    
     
   </div>
 </template>
 
 
 <script>
-//import Navbar from '@/components/Navbar.vue'
-
 import MenuList from '@/components/MenuList.vue'
 import menuJson from '@/components/MenuList.json'
+//import './assets/css/main.css'
 
   export default {
     components: {

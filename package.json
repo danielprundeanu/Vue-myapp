@@ -15,7 +15,10 @@
   "main": "background.js",
   "dependencies": {
     "all": "0.0.0",
+    "autoprefixer": "^9.8.6",
     "core-js": "^3.6.5",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
@@ -29,6 +32,7 @@
     "electron-devtools-installer": "^3.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "gulp-autoprefixer": "^7.0.1",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
     "vue-cli-plugin-electron-builder": "~2.0.0-rc.5",

@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import './assets/css/main.css'
 
-//import navbar
-Vue.component('Navbar',require('./components/Navbar.vue').default);
+
+//import Menu
+Vue.component('MenuList',require('./components/MenuList.vue').default);
 
 Vue.config.productionTip = false
 
