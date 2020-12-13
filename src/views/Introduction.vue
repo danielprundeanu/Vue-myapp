@@ -1,6 +1,6 @@
 <template>
   <div class="introduction">
-    <PrimaComponenta msg="1.1.Prima componenta"/>
+    <PrimaComponenta msg="1.1.Introduction"/>
   </div>
 </template>
 
