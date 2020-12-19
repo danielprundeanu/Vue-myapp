@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Introduction from '../views/Introduction.vue'
-import Principles from '../views/Principles.vue'
-import Elements from '../views/Elements.vue'
-import Components from '../views/Components.vue'
+import Introduction from '../pages/Introduction.vue'
+import Principles from '../pages/Principles.vue'
+import Elements from '../pages/Elements.vue'
+import Components from '../pages/Components.vue'
 
 Vue.use(VueRouter)
 

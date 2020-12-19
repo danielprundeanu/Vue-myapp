@@ -11,6 +11,8 @@
       <router-view/>
     </div>
 
+    <Introduction />
+
     
     
   </div>
@@ -20,14 +22,19 @@
 <script>
 import MenuList from '@/components/MenuList.vue'
 import menuJson from '@/components/MenuList.json'
+//import Introduction from './pages/Introduction.vue'
+import Introduction from './pages/Introduction.md'
 //import './assets/css/main.css'
 
   export default {
     components: {
-      MenuList
+      MenuList,
+      Introduction : {
+        extends : Introduction.vue.component
+      }
     },
     data(){
-      return{
+      return {
         menu: menuJson
       }
     }
