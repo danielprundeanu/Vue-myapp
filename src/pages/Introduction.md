@@ -1,7 +1,14 @@
 ---
-title: My Introduction Page
+title: Markdown Title
 ---
 
-# Top level heading
+# Markdown Heading
 
-And some more text here
+Acesta este un body Markdown
+
+div aici <div class="ceva"> iaca un div</div>
+
+
+<Poll>
+    Aici este in interiorul Poll
+</Poll>

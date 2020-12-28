@@ -1,6 +1,6 @@
 <template>
   <div class="introduction">
-    <p class="">Aici e text pentru Introduction</p>
+    <p class="bg-custom p-1">Aici e text pentru Introduction</p>
   </div>
 </template>
 

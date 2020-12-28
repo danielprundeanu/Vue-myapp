@@ -3,29 +3,33 @@
     <ul id="nav">
       <MenuList class="item" :item="menu" />
     </ul>
-
-    <div id="main">
+  
+    <!-- <div id="main">
       <router-view />
+    </div> -->
+
+    <div>
+      {{ title }}
+      <component :is="page" />
     </div>
 
-    <component :is="page" />
   </div>
 </template>
-
 
 <script>
 import MenuList from "@/components/MenuList.vue";
 import menuJson from "@/components/MenuList.json";
 //import Introduction from './pages/Introduction.vue'
-import Introduction from "./pages/Introduction.md";
+//import Introduction from "./pages/Introduction.md";
 //import './assets/css/main.css'
 
 export default {
   components: {
     MenuList,
-    Introduction: {
-      extends: Introduction.vue.component,
-    },
+    Poll
+    // Introduction: {
+    //   extends: Introduction.vue.component,
+    // },
   },
   data() {
     return {
@@ -37,7 +41,10 @@ export default {
   created() {
     const pathname = window.location.pathname.slice(1);
     this.page = () =>
-      import('./pages/${pathname}.md').then(({ vue }) => vue.component);
+      import(`./pages/${pathname}.md`).then(({ attributes, vue }) => {
+        this.title = attributes.title
+        return vue.component
+        });
   },
 };
 </script>
