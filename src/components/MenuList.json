@@ -4,35 +4,93 @@
    "collapsed":true,
    "children":[
       {
+         "title":"The Guide",
+         "path":"/theguide",
+         "nonclick": true,
+         "collapsed":true,
+         "children":[
+            {
+               "title":"About",
+               "path":"/",
+               "collapsed":false,
+               "children":[
+                  
+               ]
+            },
+            {
+               "title":"What's New",
+               "path":"/theguide/whatsnew",
+               "collapsed":false,
+               "children":[
+                  
+               ]
+            }
+         ]
+      },
+      {
          "title":"Introduction",
          "path":"/introduction",
-         "collapsed":true
+         "collapsed":true,
+         "children":[
+            {
+               "title":"WebPages",
+               "path":"/introduction/webpages",
+               "collapsed":false,
+               "children":[
+                  
+               ]
+            },
+            {
+               "title":"Newsletters",
+               "path":"/introduction/newsletters",
+               "collapsed":false,
+               "children":[
+                  
+               ]
+            }
+         ]
       },
       {
          "title":"Principles",
          "path":"/principles",
          "collapsed":true,
          "children":[
-            
-         ]
-      },
-      {
-         "title":"Elements",
-         "path":"/elements",
-         "collapsed":true,
-         "children":[
             {
-               "title":"Buttons",
-               "path":"/elements/buttons",
-               "collapsed":true,
+               "title":"Typography",
+               "path":"/principles/typography",
+               "collapsed":false,
                "children":[
                   
                ]
             },
             {
-               "title":"Icons",
-               "path":"/elements/icons",
-               "collapsed":true,
+               "title":"Spacing",
+               "path":"/principles/spacing",
+               "collapsed":false,
+               "children":[
+                  
+               ]
+            },
+            {
+               "title":"Colors",
+               "path":"/principles/colors",
+               "collapsed":false,
+               "children":[
+                  
+               ]
+            },
+            {
+               "title":"Layouts",
+               "path":"/principles/layouts",
+               "collapsed":false,
+               "children":[
+                  
+               ]
+            },
+            {
+               "title":"Grid",
+               "path":"/principles/grid",
+               "collapsed":false,
                "children":[
                   
                ]
@@ -45,8 +103,8 @@
          "collapsed":true,
          "children":[
             {
-               "title":"Banners",
-               "path":"/components/banners",
+               "title":"Key Visuals",
+               "path":"/components/kvs",
                "collapsed":true,
                "children":[
                   

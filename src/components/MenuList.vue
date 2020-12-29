@@ -5,13 +5,14 @@
         :class="{bold: isFolder}"
         @click="toggle"
         >
-            <!-- <router-link
+            <router-link
+                v-if="!item.nonclick"
                 :to="item.path"
             >
                 {{item.title}}
-            </router-link>-->
-
-            <a :href="item.path">{{item.title}}</a>
+            </router-link>
+            
+            <a v-else>{{item.title}}</a>
         </div>
 
         <ul :class="{'closed' : item.children && isOpen && !item.collapsed}">
@@ -51,7 +52,7 @@
                 this.isOpen = !this.isOpen;
                 }
             }
-            }
+        }
     }
 </script>
 
@@ -60,22 +61,56 @@
         text-align: left;
         font-size: 18px;
         list-style: none;
+
         
         .bold {
-            font-weight: 700;
+            //font-weight: 700;
         }
         .closed {
             display: none;
         }
 
         a {
-            font-weight: bold;
             text-decoration: none;
             color: #2c3e50;
 
             &.router-link-exact-active {
-                color: #42b983;
+                color: #5956FF;
             }
         }
+    }
+
+    #nav {
+        & > .nav-li > ul > .nav-li {
+            margin-bottom: 12px;
+
+            /* First Level */
+            & > div > a {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 20px;
+                padding-left: 8px;
+                margin-bottom: 12px;
+            }
+
+            & > ul > .nav-li {
+                /* Second Level */
+                & > div > a {
+                    font-size: 14px;
+                    line-height: 21px;
+                    padding-left: 16px;
+                    margin-bottom: 4x;
+                }
+
+                & > ul > .nav-li > div > a {
+                    font-size: 12px;
+                    line-height: 21px;
+                    padding-left: 24px;
+                    margin-bottom: 4x;
+                }
+
+            }
+        }
+       
     }
 </style>

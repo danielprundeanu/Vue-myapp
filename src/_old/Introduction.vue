@@ -10,8 +10,6 @@
 export default {
   name: 'Introduction',
   components: {
-
-
   }
 }
 </script>

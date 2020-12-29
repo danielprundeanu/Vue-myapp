@@ -1,22 +1,38 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Introduction from '../pages/Introduction.vue'
-import Principles from '../pages/Principles.vue'
-import Elements from '../pages/Elements.vue'
-import Components from '../pages/Components.vue'
+
+//import Elements from '../pages/Elements.vue'
+//import Components from '../pages/Components.vue'
+import Poll from '../components/Poll.vue'
+
+const About = () => import(`../pages/theguide/about.md`).then(({ vue }) => {
+  return { 
+    extends:vue.component, 
+    components: { Poll }
+  }
+})
+
+const Whatsnew = () => import(`../pages/theguide/whatsnew.md`).then(({ vue }) => {
+  return { 
+     
+       extends:vue.component, 
+       components: { Poll } 
+   }
+})
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/introduction',
-    name: 'Introduction',
-    component: Introduction
+    path: '/',
+    name: 'The Guide',
+    component: About
   },
   {
-    path: '/principles',
-    name: 'Principles',
-    component: Principles
+    path: '/theguide/whatsnew',
+    name: 'Whats New',
+    component: Whatsnew
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -27,12 +43,12 @@ const routes = [
     path: '/elements',
     props: true,
     name: 'Elements',
-    component: Elements
+    component: Whatsnew
   },
   {
     path: '/components',
     name: 'Components',
-    component: Components
+    component: Whatsnew
   }
 ]
 
