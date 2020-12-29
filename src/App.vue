@@ -19,17 +19,14 @@
 <script>
 import MenuList from "@/components/MenuList.vue";
 import menuJson from "@/components/MenuList.json";
+import Poll from "@/components/Poll.vue";
 //import Introduction from './pages/Introduction.vue'
 //import Introduction from "./pages/Introduction.md";
 //import './assets/css/main.css'
 
 export default {
   components: {
-    MenuList,
-    Poll
-    // Introduction: {
-    //   extends: Introduction.vue.component,
-    // },
+    MenuList
   },
   data() {
     return {
@@ -43,7 +40,7 @@ export default {
     this.page = () =>
       import(`./pages/${pathname}.md`).then(({ attributes, vue }) => {
         this.title = attributes.title
-        return vue.component
+        return {extends:vue.component, components: {Poll} }
         });
   },
 };

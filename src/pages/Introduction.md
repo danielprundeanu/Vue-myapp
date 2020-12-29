@@ -10,5 +10,10 @@ div aici <div class="ceva"> iaca un div</div>
 
 
 <Poll>
-    Aici este in interiorul Poll
+
+# My poll title
+
+- test 1
+- test 2
+
 </Poll>
